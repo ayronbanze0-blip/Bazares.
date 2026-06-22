@@ -98,7 +98,7 @@ process.exit(1);
 
 // ─── Graceful Shutdown ─────────────────────────────────────────────
 const shutdown = async (signal) => {
-logger.info(${signal} recebido. Encerrando graciosamente...);
+logger.info(`${signal} recebido. Encerrando graciosamente...`);
 server.close(async () => {
 await prisma.$disconnect();
 logger.info('Servidor encerrado.');
