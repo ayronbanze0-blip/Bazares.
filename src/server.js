@@ -90,7 +90,7 @@ server.listen(PORT, '0.0.0.0', () => {
 });
 
 } catch (err) {
-logger.error(❌ Falha ao conectar à base de dados: ${err.message});
+logger.error(`❌ Falha ao conectar à base de dados: ${err.message}`);
 logger.error('Verifique a variável DATABASE_URL no ficheiro .env');
 process.exit(1);
 }
