@@ -115,7 +115,7 @@ process.on('unhandledRejection', (reason) => {
 logger.error(`Unhandled Rejection: ${reason}`);
 });
 process.on('uncaughtException', (err) => {
-logger.error(Uncaught Exception: ${err.message});
+logger.error(`Uncaught Exception: ${err.message}`);
 process.exit(1);
 });
 
