@@ -30,7 +30,7 @@ const prisma = new PrismaClient();
 const REQUIRED_ENV = ['DATABASE_URL', 'JWT_ACCESS_SECRET', 'JWT_REFRESH_SECRET'];
 const missingEnv = REQUIRED_ENV.filter((key) => !process.env[key]);
 if (missingEnv.length > 0) {
-logger.error(❌ Variáveis de ambiente obrigatórias em falta: ${missingEnv.join(', ')});
+logger.error(`❌ Variáveis de ambiente obrigatórias em falta: ${missingEnv.join(', ')}`);
 logger.error('Configure o ficheiro .env a partir de .env.example antes de arrancar o servidor.');
 process.exit(1);
 }
